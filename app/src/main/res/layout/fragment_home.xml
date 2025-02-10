@@ -1,0 +1,403 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragmenthome.HomeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    android:fitsSystemWindows="true"
+    >
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_gravity="top">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/topAppbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:popupTheme="@style/Theme.Material3.Light"
+                >
+
+                <LinearLayout
+                    android:id="@+id/containerAppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <!-- SearchView -->
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/search_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_search"
+                        android:iconifiedByDefault="false"
+                        android:hint="Mau cari apa?" />
+
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/img_poster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/gojekinaja_persegi" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_promo"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/ic_promo_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_promo_platter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/maison_neue_bold"
+                        android:text="Promo platter"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@+id/img_promo"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/maison_neue_light"
+                        android:text="Offers you cannot refuse"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@+id/img_promo"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_promo_platter" />" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_payment"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ic_gopay1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_gopay"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/maison_neue_bold"
+                    android:text="Rp1.000.000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/ic_pay"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="50dp"
+                    android:src="@drawable/payment"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/ic_topUp"
+                    android:layout_width="20dp"
+                    android:layout_height="18dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/plus"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/ic_more1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/more"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingTop="16dp"
+                app:alignmentMode="alignMargins"
+                app:columnCount="4"
+                app:rowCount="2"
+                >
+
+                <ImageView
+                    android:id="@+id/ic_goCar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_gocar" />
+
+                <ImageView
+                    android:id="@+id/ic_goRide"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="36dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_goride" />
+
+                <ImageView
+                    android:id="@+id/ic_goFood"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="36dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_gofood" />
+
+                <ImageView
+                    android:id="@+id/ic_goSend"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="36dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_gosend" />
+
+                <ImageView
+                    android:id="@+id/ic_goMart"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_gomart" />
+
+                <ImageView
+                    android:id="@+id/ic_goPay2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="36dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_gopay" />
+
+                <ImageView
+                    android:id="@+id/ic_goCleaning"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="36dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_gocleaning" />
+
+                <ImageView
+                    android:id="@+id/ic_more2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="36dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_more" />
+            </androidx.gridlayout.widget.GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_green"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_gopay" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/maison_neue_bold"
+                    android:text="Save up to 10k on every booking. Subscribe" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_next" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/background6"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Discover all the good eats on GoFood"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/maison_neue_bold"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/background2"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Top-rated by other foodies"
+                android:fontFamily="@font/maison_neue_bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:text="Ad"
+                android:fontFamily="@font/maison_neue_light"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_Food"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="46dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/container_gomart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ic_goMart2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_gomart"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GoMart"
+                    android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tv_promo_slogan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="⚡PROMO TERMURAH, DIJAMIN⚡"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/maison_neue_bold"
+                    app:layout_constraintTop_toTopOf="@id/text_promo"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:background="@drawable/bg_green"
+                    android:text="See All"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/maison_neue_bold"
+                    android:textColor="@color/dark_green"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/text_promo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diskon s.d 40% seharian. Cepetan, GoMart!"
+                android:textStyle="normal"
+                android:textSize="12sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_GoMart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="46dp"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+

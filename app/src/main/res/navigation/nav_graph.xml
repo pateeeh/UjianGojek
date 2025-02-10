@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_homeFragment">
+
+    <fragment
+        android:id="@+id/nav_homeFragment"
+        android:name="com.example.ujiangojek.fragmenthome.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_promoFragment"
+        android:name="com.example.ujiangojek.fragmentpromo.PromoFragment"
+        android:label="Promo"
+        tools:layout="@layout/fragment_promo" />
+
+    <fragment
+        android:id="@+id/nav_activityFragment"
+        android:name="com.example.ujiangojek.fragmentactivity.ActivityFragment"
+        android:label="Activity"
+        tools:layout="@layout/fragment_activity" />
+
+    <fragment
+        android:id="@+id/nav_chatFragment"
+        android:name="com.example.ujiangojek.fragmentchat.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat" />
+
+</navigation>

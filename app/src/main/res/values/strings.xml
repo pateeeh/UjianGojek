@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">UjianGojek</string>
+    <string name="title_home">Home</string>
+    <string name="title_promo">Promos</string>
+    <string name="title_chat">Chat</string>
+    <string name="goride">GoRide</string>
+    <string name="gosend">GoSend</string>
+    <string name="gocar">GoCar</string>
+    <string name="gofood">GoFood</string>
+    <string name="gobox">GoBox</string>
+    <string name="godinein">GoDinein</string>
+    <string name="gopay">GoPay</string>
+    <string name="searchbar_hint">Lagi Cari Apa?</string>
+    <string name="search_hint">Search</string>
+    <string name="title_activity">Activity</string>
+
+    <string-array name="data_menu">
+        <item>All</item>
+        <item>Promos</item>
+        <item>Gofood</item>
+        <item>Paling Murah</item>
+        <item>Pasti Suka</item>
+    </string-array>
+
+    <string-array name="data_toko">
+        <item>Tomoro Coffe, Sawangan</item>
+        <item>Kopi Kenangan, Sawangan</item>
+        <item>Mie Gacoan, Sawangan</item>
+        <item>KFC, Sawangan</item>
+        <item>Roti O, Sawangan</item>
+        <item>Ayam Bakar Pak Slamet</item>
+        <item>Martabak Mas Ucup</item>
+        <item>Ketoprak Mas Raden</item>
+        <item>Sate Kambing Pak Udin</item>
+        <item>Nasi Goreng Mas Ucup</item>
+    </string-array>
+
+    <integer-array name="data_img_food">
+        <item>@drawable/tomorocoffe</item>
+        <item>@drawable/kopikenangan</item>
+        <item>@drawable/gacoan</item>
+        <item>@drawable/kfc</item>
+        <item>@drawable/roti_o</item>
+        <item>@drawable/ayambakar</item>
+        <item>@drawable/martabakmanis</item>
+        <item>@drawable/ketoprak</item>
+        <item>@drawable/sate</item>
+        <item>@drawable/nasigoreng</item>
+    </integer-array>
+
+    <string-array name="data_produk_gomart">
+        <item>Aqua Galon 19 Liter</item>
+        <item>Indomie Mi Goreng</item>
+        <item>Cimory Fresh Milk</item>
+        <item>Gulaku 1 Kg</item>
+        <item>Bimoli 1 Liter</item>
+        <item>Biore Sabun Cair</item>
+        <item>Sunlight Sabun Cuci</item>
+    </string-array>
+
+    <integer-array name="data_img_gomart">
+        <item>@drawable/aqua</item>
+        <item>@drawable/indomie</item>
+        <item>@drawable/cimorisusu</item>
+        <item>@drawable/gulaku</item>
+        <item>@drawable/bimoli</item>
+        <item>@drawable/sabun_biore</item>
+        <item>@drawable/sunlight</item>
+    </integer-array>
+
+    <string-array name="data_harga_gomart">
+        <item>Rp23.000</item>
+        <item>Rp3.500</item>
+        <item>Rp5.000</item>
+        <item>Rp21.500</item>
+        <item>Rp28.000</item>
+        <item>Rp36.500</item>
+        <item>Rp14.000</item>
+    </string-array>
+
+    <integer-array name="data_poster">
+        <item>@drawable/background1</item>
+        <item>@drawable/background2</item>
+        <item>@drawable/background3</item>
+        <item>@drawable/background4</item>
+        <item>@drawable/background5</item>
+        <item>@drawable/background6</item>
+    </integer-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
