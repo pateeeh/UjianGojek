@@ -56,13 +56,22 @@
             android:orientation="vertical"
             >
 
-            <ImageView
-                android:id="@+id/img_poster"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/gojekinaja_persegi" />
+                app:cardCornerRadius="24dp">
+
+                <ImageView
+                    android:id="@+id/img_poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/gojekinaja_persegi"
+                    />
+            </androidx.cardview.widget.CardView>
+
+
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -172,7 +181,7 @@
                 android:paddingTop="16dp"
                 app:alignmentMode="alignMargins"
                 app:columnCount="4"
-                app:rowCount="2"
+                app:rowCount="4"
                 >
 
                 <ImageView
@@ -188,6 +197,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="36dp"
+                    android:layout_marginBottom="4dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_goride" />
 
@@ -196,6 +206,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="36dp"
+                    android:layout_marginBottom="4dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_gofood" />
 
@@ -204,14 +215,65 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="36dp"
+                    android:layout_marginBottom="4dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_gosend" />
+
+                <TextView
+                    android:id="@+id/tv_goCar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gocar"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/maison_neue_bold"
+                    android:layout_marginStart="30dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_goRide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/goride"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/maison_neue_bold"
+                    android:layout_marginStart="40dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_goFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gofood"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/maison_neue_bold"
+                    android:layout_marginStart="40dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_goSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gosend"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/maison_neue_bold"
+                    android:layout_marginStart="40dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
 
                 <ImageView
                     android:id="@+id/ic_goMart"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_gomart" />
 
@@ -220,6 +282,8 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="36dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_gopay" />
 
@@ -228,6 +292,8 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="36dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_gocleaning" />
 
@@ -236,8 +302,58 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="36dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_more" />
+
+                <TextView
+                    android:id="@+id/tv_goMart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GoMart"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/maison_neue_bold"
+                    android:layout_marginStart="28dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_goPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gopay"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/maison_neue_bold"
+                    android:layout_marginStart="40dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_goCleaning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GoClean"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/maison_neue_bold"
+                    android:layout_marginStart="40dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="More"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/maison_neue_bold"
+                    android:layout_marginStart="45dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
             </androidx.gridlayout.widget.GridLayout>
 
             <LinearLayout

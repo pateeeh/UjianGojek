@@ -8,10 +8,8 @@ import com.example.ujiangojek.R
 import com.example.ujiangojek.databinding.ItemProfileBinding
 import com.example.ujiangojek.dataclass.ProfileItem
 
-class ProfileAdapter(private val items: List<ProfileItem>) :
-    RecyclerView.Adapter<ProfileAdapter.ProfileViewHolder>() {
-
-    inner class ProfileViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+class ProfileAdapter(private val items: List<ProfileItem>) : RecyclerView.Adapter<ProfileAdapter.ProfileViewHolder>() {
+    class ProfileViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ItemProfileBinding.bind(view)
 
         fun bind(item: ProfileItem) {

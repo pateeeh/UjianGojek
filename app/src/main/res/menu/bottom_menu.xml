@@ -13,7 +13,7 @@
         app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/nav_activityFragment"
-        android:icon="@drawable/ic_promo_black"
+        android:icon="@drawable/baseline_pending_actions_24"
         android:title="@string/title_activity"
         app:showAsAction="ifRoom"/>
     <item

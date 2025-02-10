@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ProfileActivity"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="8dp">
 
     <androidx.appcompat.widget.Toolbar
     android:id="@+id/toolbar"
@@ -49,6 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ucup Gula Jawa"
+                android:layout_marginTop="8dp"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
