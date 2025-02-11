@@ -1,6 +1,7 @@
 package com.example.ujiangojek
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,9 +19,10 @@ class ProfileActivity : AppCompatActivity() {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
+        setSupportActionBar(binding.appBarProfile)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        binding.toolbar.setNavigationOnClickListener { onBackPressed() }
+        binding.appBarProfile.setNavigationOnClickListener { onBackPressed() }
+
 
         val profileItems = listOf(
             ProfileItem(R.drawable.ic_gocar, "My activity", "See ongoing & history"),
@@ -37,5 +39,7 @@ class ProfileActivity : AppCompatActivity() {
 
         binding.rvProfileList.layoutManager = LinearLayoutManager(this)
         binding.rvProfileList.adapter = ProfileAdapter(profileItems)
+
     }
+
 }

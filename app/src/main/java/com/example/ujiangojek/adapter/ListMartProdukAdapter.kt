@@ -46,8 +46,11 @@ class ListMartProdukAdapter(private val listProduk : ArrayList<GoMartProduk>): R
         holder.tvHarga.text = harga
 
         holder.itemView.setOnClickListener {
-            val foodDetail = Intent(holder.itemView.context, FoodDetailActivity::class.java)
-            holder.itemView.context.startActivity(foodDetail)
+            val produkDetail = Intent(holder.itemView.context, FoodDetailActivity::class.java)
+            produkDetail.putExtra("KEY_IMAGE", image)
+            produkDetail.putExtra("KEY_NAMAPRODUK", namaProduk)
+            produkDetail.putExtra("KEY_HARGA", harga)
+            holder.itemView.context.startActivity(produkDetail)
         }
     }
 

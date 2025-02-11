@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ujiangojek.FoodDetailActivity
+import com.example.ujiangojek.PromoCodeActivity
 import com.example.ujiangojek.R
 import com.example.ujiangojek.dataclass.FoodTopRate
 import com.example.ujiangojek.dataclass.GoMartProduk
@@ -42,6 +43,10 @@ class ListPosterAdapter(private val listPoster : ArrayList<Poster>): RecyclerVie
         val(image) = listPoster[position]
         holder.imgPhoto.setImageResource(image)
 
+        holder.itemView.setOnClickListener{
+            val poster = Intent(holder.itemView.context, PromoCodeActivity::class.java)
+            holder.itemView.context.startActivity(poster)
+        }
     }
 
     override fun getItemCount(): Int = listPoster.size

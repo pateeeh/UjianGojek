@@ -1,5 +1,6 @@
 package com.example.ujiangojek.fragmentpromo
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,8 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ujiangojek.PromoCodeActivity
 import com.example.ujiangojek.R
 import com.example.ujiangojek.adapter.ListFoodTopRateAdapter
 import com.example.ujiangojek.adapter.MenuPromoAdapter
@@ -73,6 +76,13 @@ class PromoFragment : Fragment() {
         val toolbar = view.findViewById<Toolbar>(R.id.appBarPromo)
         (toolbar.context as? AppCompatActivity)?.setSupportActionBar(toolbar)
         (toolbar.context as? AppCompatActivity)?.supportActionBar?.title = ""
+
+
+        binding.btnPromoCode.setOnClickListener{
+            val intent = Intent(requireContext(), PromoCodeActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 

@@ -9,13 +9,21 @@
         android:id="@+id/nav_homeFragment"
         android:name="com.example.ujiangojek.fragmenthome.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_homeFragment_to_profileActivity"
+            app:destination="@id/profileActivity" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_promoFragment"
         android:name="com.example.ujiangojek.fragmentpromo.PromoFragment"
         android:label="Promo"
-        tools:layout="@layout/fragment_promo" />
+        tools:layout="@layout/fragment_promo" >
+        <action
+            android:id="@+id/action_nav_promoFragment_to_promoCodeActivity"
+            app:destination="@id/promoCodeActivity" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_activityFragment"
@@ -28,5 +36,15 @@
         android:name="com.example.ujiangojek.fragmentchat.ChatFragment"
         android:label="Chat"
         tools:layout="@layout/fragment_chat" />
+    <activity
+        android:id="@+id/profileActivity"
+        android:name="com.example.ujiangojek.ProfileActivity"
+        android:label="activity_profile"
+        tools:layout="@layout/activity_profile" />
+    <activity
+        android:id="@+id/promoCodeActivity"
+        android:name="com.example.ujiangojek.PromoCodeActivity"
+        android:label="activity_promo_code"
+        tools:layout="@layout/activity_promo_code" />
 
 </navigation>

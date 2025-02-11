@@ -44,6 +44,8 @@ class ListFoodTopRateAdapter(private val listFood : ArrayList<FoodTopRate>): Rec
 
         holder.itemView.setOnClickListener {
             val foodDetail = Intent(holder.itemView.context, FoodDetailActivity::class.java)
+            foodDetail.putExtra("KEY_IMAGE", image)
+            foodDetail.putExtra("KEY_NAMATOKO", namaToko)
             holder.itemView.context.startActivity(foodDetail)
         }
     }
