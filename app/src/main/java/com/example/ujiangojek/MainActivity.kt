@@ -8,6 +8,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.ujiangojek.databinding.ActivityMainBinding
+import com.example.ujiangojek.fragmentactivity.ActivityFragment
+import com.example.ujiangojek.fragmenthome.HomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -34,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         }
         navView.setupWithNavController(navController)
         }
+
+
 }
 
 

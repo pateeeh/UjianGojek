@@ -38,7 +38,7 @@ class ListFoodTopRateAdapter(private val listFood : ArrayList<FoodTopRate>): Rec
     }
 
     override fun onBindViewHolder(holder: ListFoodTopRateAdapter.ListViewHolder, position: Int) {
-        val(image, namaToko) = listFood[position]
+        val(image, namaToko, logo) = listFood[position]
         holder.imgPhoto.setImageResource(image)
         holder.tvName.text = namaToko
 
@@ -46,6 +46,7 @@ class ListFoodTopRateAdapter(private val listFood : ArrayList<FoodTopRate>): Rec
             val foodDetail = Intent(holder.itemView.context, FoodDetailActivity::class.java)
             foodDetail.putExtra("KEY_IMAGE", image)
             foodDetail.putExtra("KEY_NAMATOKO", namaToko)
+            foodDetail.putExtra("KEY_LOGO", logo)
             holder.itemView.context.startActivity(foodDetail)
         }
     }

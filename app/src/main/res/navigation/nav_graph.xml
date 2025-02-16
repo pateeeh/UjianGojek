@@ -35,16 +35,27 @@
         android:id="@+id/nav_chatFragment"
         android:name="com.example.ujiangojek.fragmentchat.ChatFragment"
         android:label="Chat"
-        tools:layout="@layout/fragment_chat" />
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_nav_chatFragment_to_inboxActivity"
+            app:destination="@id/inboxActivity" />
+    </fragment>
+
     <activity
         android:id="@+id/profileActivity"
         android:name="com.example.ujiangojek.ProfileActivity"
         android:label="activity_profile"
         tools:layout="@layout/activity_profile" />
+
     <activity
         android:id="@+id/promoCodeActivity"
         android:name="com.example.ujiangojek.PromoCodeActivity"
         android:label="activity_promo_code"
         tools:layout="@layout/activity_promo_code" />
+    <activity
+        android:id="@+id/inboxActivity"
+        android:name="com.example.ujiangojek.fragmentchat.icon.InboxActivity"
+        android:label="activity_inbox"
+        tools:layout="@layout/activity_inbox" />
 
 </navigation>

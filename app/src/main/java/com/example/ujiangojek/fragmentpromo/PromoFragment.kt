@@ -101,10 +101,11 @@ class PromoFragment : Fragment() {
     private fun getListFood(): Collection<FoodTopRate> {
         val dataPhoto = resources.obtainTypedArray(R.array.data_img_food)
         val dataName = resources.getStringArray(R.array.data_toko)
+        val dataLogo = resources.obtainTypedArray(R.array.data_logo_food)
 
         val listFood = ArrayList<FoodTopRate>()
         for (i in dataName.indices) {
-            val food = FoodTopRate(dataPhoto.getResourceId(i, -1), dataName[i])
+            val food = FoodTopRate(dataPhoto.getResourceId(i, -1), dataName[i], dataLogo.getResourceId(i, 0))
             listFood.add(food)
         }
         dataPhoto.recycle()

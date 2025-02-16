@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ujiangojek.FoodDetailActivity
+import com.example.ujiangojek.ProductDetailActivity
 import com.example.ujiangojek.R
 import com.example.ujiangojek.dataclass.FoodTopRate
 import com.example.ujiangojek.dataclass.GoMartProduk
@@ -46,9 +47,9 @@ class ListMartProdukAdapter(private val listProduk : ArrayList<GoMartProduk>): R
         holder.tvHarga.text = harga
 
         holder.itemView.setOnClickListener {
-            val produkDetail = Intent(holder.itemView.context, FoodDetailActivity::class.java)
+            val produkDetail = Intent(holder.itemView.context, ProductDetailActivity::class.java)
             produkDetail.putExtra("KEY_IMAGE", image)
-            produkDetail.putExtra("KEY_NAMAPRODUK", namaProduk)
+            produkDetail.putExtra("KEY_PRODUK", namaProduk)
             produkDetail.putExtra("KEY_HARGA", harga)
             holder.itemView.context.startActivity(produkDetail)
         }

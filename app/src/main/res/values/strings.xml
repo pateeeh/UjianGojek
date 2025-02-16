@@ -48,6 +48,20 @@
         <item>@drawable/nasigoreng</item>
     </integer-array>
 
+
+    <integer-array name="data_logo_food">
+        <item>@drawable/tomorocoffe_ic</item>
+        <item>@drawable/kopi_kenangan_ic</item>
+        <item>@drawable/gacoan_ic</item>
+        <item>@drawable/kfc_ic</item>
+        <item>@drawable/roti_o_ic</item>
+        <item>@drawable/ayambakar</item>
+        <item>@drawable/martabakmanis</item>
+        <item>@drawable/ketoprak</item>
+        <item>@drawable/sate</item>
+        <item>@drawable/nasigoreng</item>
+    </integer-array>
+
     <string-array name="data_produk_gomart">
         <item>Aqua Galon 19 Liter</item>
         <item>Indomie Mi Goreng</item>
@@ -76,6 +90,17 @@
         <item>Rp28.000</item>
         <item>Rp36.500</item>
         <item>Rp14.000</item>
+    </string-array>
+
+
+    <string-array name="data_desc_gomart">
+        <item>Air mineral berkualitas dari sumber pegunungan alami, menjaga kesegaran dan kesehatan keluarga dengan kemurnian yang terjaga.</item>
+        <item>Mi instan legendaris dengan cita rasa gurih khas, dilengkapi bumbu lezat yang membuat setiap suapan semakin nikmat.</item>
+        <item>Susu segar berkualitas tinggi dengan rasa creamy dan kaya nutrisi, cocok untuk memenuhi kebutuhan gizi harian.</item>
+        <item>Gula pasir berkualitas premium, bersih dan murni, ideal untuk berbagai kebutuhan memasak, membuat kue, atau minuman.</item>
+        <item>Minyak goreng berkualitas tinggi dengan kandungan Omega 9, memberikan hasil gorengan lebih renyah dan sehat.</item>
+        <item>Sabun mandi cair dengan formula lembut yang membersihkan kulit secara menyeluruh sekaligus menjaga kelembapan.</item>
+        <item>Cairan pencuci piring dengan formula kuat yang efektif menghilangkan lemak dan kotoran membandel, menjadikan peralatan dapur bersih berkilau.</item>
     </string-array>
 
     <integer-array name="data_poster">
