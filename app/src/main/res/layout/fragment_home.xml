@@ -2,14 +2,21 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".fragmenthome.HomeFragment"
+    tools:context=".ui.fragmenthome.HomeFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:padding="16dp"
     android:fitsSystemWindows="true"
     >
-        <com.google.android.material.appbar.AppBarLayout
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -32,7 +39,6 @@
                     android:orientation="horizontal"
                     android:padding="8dp">
 
-                    <!-- SearchView -->
                     <androidx.appcompat.widget.SearchView
                         android:id="@+id/search_view"
                         android:layout_width="0dp"
@@ -123,9 +129,9 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/bg_payment"
+                android:background="@drawable/btn_white"
                 >
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -391,11 +397,20 @@
 
             </LinearLayout>
 
-            <ImageView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/background6"
-                android:layout_marginTop="16dp"/>
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp">
+
+                <ImageView
+                    android:id="@+id/img_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/background4"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="16dp"/>
+            </androidx.cardview.widget.CardView>
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -407,11 +422,22 @@
                 android:layout_marginTop="16dp"
                 android:textColor="@color/black"/>
 
-            <ImageView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/background2"
-                android:layout_marginTop="24dp"/>
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp">
+
+
+                <ImageView
+                    android:id="@+id/img_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/background2"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="24dp"/>
+
+            </androidx.cardview.widget.CardView>
+
 
             <TextView
                 android:layout_width="wrap_content"

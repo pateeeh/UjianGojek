@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ProductDetailActivity">
+    tools:context=".ui.fragmenthome.ProductDetailActivity">
 
     <ScrollView
         android:id="@+id/scroll_view"
@@ -119,21 +119,6 @@
 
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Similar products you might like"
-                android:textSize="24sp"
-                android:fontFamily="@font/maison_neue_bold"
-                android:textColor="@color/black"
-                android:layout_marginBottom="16dp"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_similar_product"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-
         </LinearLayout>
     </ScrollView>
 
@@ -147,18 +132,25 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
+            android:id="@+id/btn_pesan"
             android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/btn_white"
-            android:text="Your Cart"/>
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:background="@drawable/bg_green"
-            android:text="Add"/>
+            android:text="@string/buat_pesanan"/>
+
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="gone"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

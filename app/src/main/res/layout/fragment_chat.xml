@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragmentchat.ChatFragment"
+    tools:context=".ui.fragmentchat.ChatFragment"
+    android:orientation="vertical"
     >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="8dp"
-        >
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarLayout"
@@ -120,84 +115,16 @@
             android:layout_marginTop="24dp"/>
 
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_chat"
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_chat"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="16dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingStart="16dp">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/avatar"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ucup_ngamuk"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/maison_neue_bold"
-                    android:text="Ucup"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"
-                    app:layout_constraintStart_toEndOf="@+id/avatar"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_chat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Lorem Ipsum dolor ..."
-                    android:fontFamily="@font/maison_neue_book"
-                    android:textSize="14sp"
-                    android:layout_marginStart="16dp"
-                    app:layout_constraintStart_toEndOf="@+id/avatar"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="13/02/25"
-                    android:textSize="12sp"
-                    android:fontFamily="@font/maison_neue_book"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
+            android:layout_height="wrap_content"/>
 
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="340dp"
-            >
-
-            <ImageView
-                android:id="@+id/ic_add_member"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/plus"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                 />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
-
-
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

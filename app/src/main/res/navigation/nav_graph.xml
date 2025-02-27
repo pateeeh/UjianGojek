@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_homeFragment"
-        android:name="com.example.ujiangojek.fragmenthome.HomeFragment"
+        android:name="com.example.ujiangojek.ui.fragmenthome.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/nav_promoFragment"
-        android:name="com.example.ujiangojek.fragmentpromo.PromoFragment"
+        android:name="com.example.ujiangojek.ui.fragmentpromo.PromoFragment"
         android:label="Promo"
         tools:layout="@layout/fragment_promo" >
         <action
@@ -27,13 +27,17 @@
 
     <fragment
         android:id="@+id/nav_activityFragment"
-        android:name="com.example.ujiangojek.fragmentactivity.ActivityFragment"
+        android:name="com.example.ujiangojek.ui.fragmentactivity.ActivityFragment"
         android:label="Activity"
-        tools:layout="@layout/fragment_activity" />
+        tools:layout="@layout/fragment_activity">
+
+        <deepLink
+            app:uri="ujiangojek://activityfragment"/>
+    </fragment>
 
     <fragment
         android:id="@+id/nav_chatFragment"
-        android:name="com.example.ujiangojek.fragmentchat.ChatFragment"
+        android:name="com.example.ujiangojek.ui.fragmentchat.ChatFragment"
         android:label="Chat"
         tools:layout="@layout/fragment_chat" >
         <action
@@ -43,18 +47,18 @@
 
     <activity
         android:id="@+id/profileActivity"
-        android:name="com.example.ujiangojek.ProfileActivity"
+        android:name="com.example.ujiangojek.ui.fragmenthome.profileactivity.ProfileActivity"
         android:label="activity_profile"
         tools:layout="@layout/activity_profile" />
 
     <activity
         android:id="@+id/promoCodeActivity"
-        android:name="com.example.ujiangojek.PromoCodeActivity"
+        android:name="com.example.ujiangojek.ui.PromoCodeActivity"
         android:label="activity_promo_code"
         tools:layout="@layout/activity_promo_code" />
     <activity
         android:id="@+id/inboxActivity"
-        android:name="com.example.ujiangojek.fragmentchat.icon.InboxActivity"
+        android:name="com.example.ujiangojek.ui.fragmentchat.icon.InboxActivity"
         android:label="activity_inbox"
         tools:layout="@layout/activity_inbox" />
 

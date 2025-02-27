@@ -114,5 +114,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id diam in purus accumsan sodales. Pellentesque pulvinar neque quis ex vulputate, maximus posuere neque volutpat. Proin fermentum massa mi, sed semper lacus tempus finibus. Aliquam erat volutpat.</string>
+    <string name="buat_pesanan">buat pesanan</string>
 
 </resources>
