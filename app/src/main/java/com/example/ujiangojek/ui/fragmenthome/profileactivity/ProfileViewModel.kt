@@ -34,7 +34,7 @@ class ProfileViewModel : ViewModel() {
                     Log.d("ProfileViewModel", "Response: $responseBody")
 
                     if (!responseBody.isNullOrEmpty()) {
-                        _profile.postValue(responseBody[0]) // Ambil user pertama
+                        _profile.postValue(responseBody[1])
                     } else {
                         Log.e("ProfileViewModel", "Data kosong!")
                     }

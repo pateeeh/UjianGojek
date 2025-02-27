@@ -1,8 +1,10 @@
 package com.example.ujiangojek.ui.fragmenthome.profileactivity
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -41,7 +43,17 @@ class ProfileActivity : AppCompatActivity() {
         binding.rvProfileList.layoutManager = LinearLayoutManager(this)
         binding.rvProfileList.adapter = ProfileAdapter(profileItems)
 
-        // ✅ Observe profile LiveData
+        binding.icEdit.setOnClickListener{
+            val userProfile = viewModel.profile.value
+            if (userProfile != null) {
+                val intent = Intent(this, UpdateProfileActivity::class.java)
+                intent.putExtra(UpdateProfileActivity.EXTRA_DATA, userProfile)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Data profil tidak tersedia", Toast.LENGTH_SHORT).show()
+            }
+        }
+
         viewModel.profile.observe(this) { userProfile ->
             if (userProfile != null) {
                 Log.d("ProfileActivity", "Nama: ${userProfile.nama}, Email: ${userProfile.email}")
@@ -55,16 +67,20 @@ class ProfileActivity : AppCompatActivity() {
             }
         }
 
-        // ✅ Observe isLoading untuk progress bar
         viewModel.isLoading.observe(this) { isLoading ->
             showLoading(isLoading)
         }
 
-        // ✅ Panggil API setelah observer dipasang
+    }
+
+    override fun onResume() {
+        super.onResume()
         viewModel.getProfile()
     }
 
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
+
+
 }
