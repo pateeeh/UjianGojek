@@ -9,6 +9,7 @@ import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.Headers
 import retrofit2.http.POST
 import retrofit2.http.PUT
 import retrofit2.http.Query
@@ -28,6 +29,16 @@ interface ApiService {
         @Field("no_telp") noTelp: String,
         @Field("email") email: String
     ): Call<ListUserResponse>
+
+    @FormUrlEncoded
+    @Headers("Content-Type: application/x-www-form-urlencoded")
+    @POST("api/v1/user/create")
+    fun addUser(
+        @Field("nama") nama: String,
+        @Field("no_telp") noTelp: String,
+        @Field("email") email: String,
+        @Field("foto") foto: String
+    ): Call<ListUserResponseItem>
 
     @GET("api/v1/produk")
     fun getAllProduk(): Call<ListProdukResponse>

@@ -124,7 +124,16 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_chat"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="310dp"/>
+
+    <ImageView
+        android:id="@+id/btn_add"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/plus"
+        android:scaleType="fitCenter"
+        android:layout_margin="16dp"
+        android:layout_gravity="end"/>
 
 
 </LinearLayout>

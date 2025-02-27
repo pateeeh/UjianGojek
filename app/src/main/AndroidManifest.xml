@@ -15,6 +15,9 @@
         android:theme="@style/Theme.GojekClone"
         tools:targetApi="31">
         <activity
+            android:name=".ui.fragmentchat.AddUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.fragmenthome.profileactivity.UpdateProfileActivity"
             android:exported="false" />
         <activity

@@ -46,6 +46,11 @@ class ChatFragment : Fragment() {
             startActivity(intent)
         }
 
+        binding.btnAdd.setOnClickListener{
+            val intent = Intent(requireContext(), AddUserActivity::class.java)
+            startActivity(intent)
+        }
+
         val progressBar = binding.progressBar
 
         val colorIndeterminate = ContextCompat.getColor(requireContext(), R.color.green)
